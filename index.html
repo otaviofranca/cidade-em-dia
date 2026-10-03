@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d252d">
+  <title>Cidade em Dia</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d252d'/%3E%3Cpath d='M16 4v24' stroke='%23f6c600' stroke-width='4' stroke-dasharray='6 4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="cidadao">
+  <div id="app" class="app">
+    <header class="topo" id="topo"></header>
+    <main class="miolo" id="miolo" tabindex="-1"></main>
+    <footer class="rodape" id="rodape"></footer>
+  </div>
+
+  <!-- Única dependência externa: Leaflet 1.9.4. Sem internet, o app segue funcionando sem o mapa. -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/cidadao.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cidade em Dia | Painel da prefeitura</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d252d'/%3E%3Cpath d='M16 4v24' stroke='%23f6c600' stroke-width='4' stroke-dasharray='6 4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="admin">
+  <div class="adm-layout">
+    <aside class="lateral no-print">
+      <div class="lateral-marca">Cidade em Dia<small>Painel da prefeitura</small></div>
+      <nav aria-label="Principal">
+        <a href="#painel" data-rota="painel">Painel</a>
+        <a href="#ocorrencias" data-rota="ocorrencias">Ocorrências <span class="badge" id="badge-abertas" title="Ocorrências abertas"></span></a>
+      </nav>
+      <div class="lateral-rodape">
+        <p id="nome-cidade"></p>
+        <button type="button" class="btn-adm" id="b-restaurar">Restaurar dados de exemplo</button>
+      </div>
+    </aside>
+    <main id="conteudo" class="conteudo" tabindex="-1"></main>
+  </div>
+  <div id="toast" class="toast no-print" role="status" aria-live="polite"></div>
+
+  <!-- Única dependência externa: Leaflet 1.9.4. Sem internet, o painel segue funcionando sem o mapa. -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
